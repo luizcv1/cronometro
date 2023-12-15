@@ -39,7 +39,7 @@
 
 }
 
-#miliseconds {
+#milliseconds {
     font-size: 30px;
     color: #525763;
 }
@@ -56,7 +56,7 @@
     border-radius: 30px;
     cursor: pointer;
     border: 1px solid #ccc;
-    transition: all 0.25 ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
