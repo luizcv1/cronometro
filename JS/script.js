@@ -30,8 +30,8 @@ function startTimer() {
         seconds = 0;
       }
 
-      minutesEl.textContent = formatTime(minutes);
-      secondsEl.textContent = formatTime(seconds);
+      minutesEl.textContent = formatTimer(minutes);
+      secondsEl.textContent = formatTimer(seconds);
       millisecondsEl.textContent = formatMilliseconds(milliseconds);
     }
   }, 10);
@@ -40,16 +40,22 @@ function startTimer() {
   pausebtn.style.display = "block";
 }
 
-function pauseTime() {
+function pauseTimer() {
   isPaused = true;
   pausebtn.style.display = "none";
   resumebtn.style.display = "block";
 }
 
-function formatTime(time) {
-  return time < 10 ? "0${time}" : time;
+function resumeTimer() {
+  isPaused = false;
+  pausebtn.style.display = "block";
+  resumebtn.style.display = "nome";
 }
 
-function formatMilliseconds(time) {
-  return time < 100 ? "${time}".padStart(3, "0") : time;
+function formatTimer(timer) {
+  return timer < 10 ? "0${timer}" : timer;
+}
+
+function formatMilliseconds(timer) {
+  return timer < 100 ? "${timer}".padStart(3, "0") : timer;
 }
